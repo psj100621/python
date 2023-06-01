@@ -1,7 +1,7 @@
 from cs1robots import *
 load_world('venv/worlds/add34.wld')
 hubo = Robot()
-hubo.set_trace('blue')
+hubo.set_trace('orange')
 
 def turnright():
     for i in range(3):
