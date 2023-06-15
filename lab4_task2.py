@@ -1,18 +1,21 @@
-x = input()
-y = x.split()
-[a, b, c] = y
-A = int(a)
-B = int(b)
-C = int(c)
+a = input("side a: ")
+b = input("side b: ")
+c = input("side c: ")
+A = float(a)
+B = float(b)
+C = float(c)
 
-def euclid():
-    if A < B+C:
-        return True
-    elif B < A+C:
-        return True
-    elif C < A+B:
-        return True
-    else:
+def is_triangle(X,Y,Z):
+    if X >= Y+Z:
         return False
+    elif Y >= X+Z:
+        return False
+    elif Z >= X+Y:
+        return False
+    else:
+        return True
 
-D = euclid(A, B, C)
+if is_triangle(A,B,C):
+    print("YES")
+else:
+    print("NO")
